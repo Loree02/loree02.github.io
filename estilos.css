@@ -7,7 +7,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 20px;
     background-image:url("../imagenes/logo.png");
-    background-size: 800px 450px; /* Ajusta la imagen para cubrir todo el fondo */
+    background-size: 500px 300 px; /* Ajusta la imagen para cubrir todo el fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: absolute;
     background-position-x: center;
