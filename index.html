@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Acceso Restringido</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .login-container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="password"] {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .text{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-style: initial;
+            position: absolute;
+            
+           top: 200px;
+           left: 600px;
+            
+        }
+    </style>
+</head>
+<body>
+    <p2 class="text">Para mis encargados favoritos espero que os ayude <3></p2>
+    <div class="login-container">
+        <h2>Introduzca el código de acceso</h2>
+        
+        <input type="password" id="codigo" placeholder="Código de acceso">
+        <button onclick="verificarCodigo()">Ingresar</button>
+        <p id="mensaje-error" style="color: red; display: none;">Código incorrecto, inténtelo de nuevo.</p>
+    </div>
+    <script>
+        function verificarCodigo() {
+            const codigoCorrecto = "1234"; 
+            const codigoIngresado = document.getElementById('codigo').value;
+
+            if (codigoIngresado === codigoCorrecto) {
+                alert("Codigo correcto, redirigiendo...")
+                window.location.href= "punto2.html";
+            } else {
+                alert("codigo incorrecto, intentalo de nuevo.")
+                document.getElementById('mensaje-error').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
